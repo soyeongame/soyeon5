@@ -96,7 +96,7 @@ $(function(Phaser) {
 
 			this.timerCount = 60;
 			myGame.score = 0;
-			var fontStyle = { font: '16px \'Press Start 2P\'', fill: '#fff' };
+			var fontStyle = { font: '16px \'HoonMakdaeyunpilR\'', fill: '#000' };
 			this.scoreText = this.game.add.text(this.game.width-24, 24, myGame.score.toString(), fontStyle);
 			this.scoreText.anchor.setTo(1.0, 0);
 			this.timerText = this.game.add.text(35, 24, this.formatTime(this.timerCount), fontStyle);
@@ -269,9 +269,9 @@ $(function(Phaser) {
 		},
 		create: function(){
 			var background = this.game.add.sprite(0, 0, 'finish_background');
-			var fontStyle = { font: '18px \'Press Start 2P\'', fill: '#fff', align: 'center', wordWrap: true, wordWrapWidth: this.game.width * 0.50 };
+			var fontStyle = { font: '18px \'HoonMakdaeyunpilR\'', fill: '#000', align: 'center', wordWrap: true, wordWrapWidth: this.game.width * 0.50 };
 			var expression = this.congratulations[Math.floor(Math.random() * this.congratulations.length)];
-			this.scoreText = this.game.add.text(this.game.world.centerX,this.game.world.height * 0.60, 'Score: ' + myGame.score, {font: '18px \'Press Start 2P\'', fill: '#ffffff'});
+			this.scoreText = this.game.add.text(this.game.world.centerX,this.game.world.height * 0.60, 'Score: ' + myGame.score, {font: '18px \'HoonMakdaeyunpilR\'', fill: '#000000'});
 			this.scoreText.anchor.setTo(0.5, 0.5);
 			this.congratulationsText = this.game.add.text(this.game.world.centerX, this.game.world.height * 0.20, expression, fontStyle);
 			this.congratulationsText.anchor.setTo(0.5, 0.0);
