@@ -66,8 +66,7 @@ $(function(Phaser) {
 			this.startButton = this.add.button(120, this.game.world.height * 0.75, 'start_button', this.startGame, this);
 			this.startButton.anchor.setTo(0.5, 0.5);
 
-			this.shopButton = this.add.button(284, this.game.world.height * 0.75, 'shop_button', this.shopScroll, this);
-			this.shopButton.anchor.setTo(0.5, 0.5);
+			
 		},
 		shopScroll: function() {
 			$('body, html').animate({
