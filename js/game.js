@@ -21,7 +21,7 @@ $(function(Phaser) {
 			this.game.scale.setScreenSize(true);
 		},
 		create: function(){
-			this.game.stage.backgroundColor = '#0185a1';
+			this.game.stage.backgroundColor = '#b9bcbd';
 			this.game.physics.startSystem(Phaser.Physics.ARCADE);
 			this.game.state.start('loading');
 		}
