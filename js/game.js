@@ -198,7 +198,7 @@ $(function(Phaser) {
 			this.createRandomPresent();
 		},
 		collectCoal: function(player, coal){
-			myGame.score -= 500;
+			myGame.score -= 1000;
 			this.constrainScore();
 			coal.kill();
 			this.createRandomCoal();
