@@ -274,8 +274,7 @@ $(function(Phaser) {
 			this.startButton = this.add.button(this.game.world.centerX, this.game.world.height * 0.76, 'play_again_button', myGame.menu.prototype.startGame, this);
 			this.startButton.anchor.setTo(0.5, 0.5);
 
-			this.shopButton = this.add.button(this.game.world.centerX, this.game.world.height * 0.90, 'shop_button', myGame.menu.prototype.shopScroll, this);
-			this.shopButton.anchor.setTo(0.5, 0.5);
+			
 		}
 	};
 
