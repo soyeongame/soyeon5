@@ -100,7 +100,7 @@ var playState = function(game){
                 this.fruits.fruitSound.stop();
 
             game.global.collideFlag = true;
-            // each fruits score will be 1, increase score by one
+            // each fruits score will be 1
             game.global.score += 1;
             this.gameScore.update();
         },
@@ -131,7 +131,7 @@ var playState = function(game){
                 game.global.gemSound.stop();
 
             gems.kill();
-            game.global.score += 2; // each gem, increase score by 2
+            game.global.score *= 2; // double the score
             game.global.collideFlag = true;
             this.gameScore.update();
         },

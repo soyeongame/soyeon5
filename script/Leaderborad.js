@@ -5,7 +5,7 @@ var leaderboardState = function(game){
     this.menuBtn;
     
     this.style = { font: "bold 34px Arial", fill: "#fff", tabs: [ 100, 300 ] };
-    this.textStyle = { font: "28px Comic Sans MS",stroke: '#ffffff', strokeThickness: 4, fill: "#BE5446", tabs: [ 100, 300 ] };
+    this.textStyle = { font: "28px Comic Sans MS",stroke: '#ffffff', strokeThickness: 4, fill: "#64231b", tabs: [ 100, 300 ] };
     this.styleTextH = { font: "bold 58px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
     this.styleTextH2 = { font: "bold 36px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
     
@@ -16,7 +16,7 @@ leaderboardState.prototype = {
     
     create: function(){
         console.log('Leaderboard State');
-        this.game.stage.backgroundColor = '#373F6C';
+        this.game.stage.backgroundColor = '#0c2e37ff';
         game.global.menuBgSound.stop();
         
         this.buildInterface();
