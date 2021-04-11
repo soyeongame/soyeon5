@@ -1,31 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <title>DTMB</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="assets/icon.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/icon-120.png">
+        <style>
+            body {
+                background: #430;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                overflow: hidden;
+            }
+            #screen {
+                display: inline-block;
+            }
+            </style>
+        </style>
+    </head>
+    <body>
+        <div id="screen"></div>
+        <script src="phaser.min.js"></script>
+        <script src="main.js"></script>
+        <script>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Winter Bird Game</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js" integrity="sha256-Hu8qm4q26AVXOWGlyZqO04hF+8WlulgTj51vr0FgNG8=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js" integrity="sha256-J4zMW4h1Q+phN9U/KCNKRDlMGCuL8uqSsLVeclTF46k=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js" integrity="sha256-D/ObQKlMXTTSWaefJnNgyHjbE4HSZWoJ1zh72TzHPUA=" crossorigin="anonymous"></script>
-    <style>
-        body {
-            padding: 0;
-			margin: 0;
-			background-color: #123;
-        }
+            function start() {
+                init(document.querySelector('#screen'));
+            }
 
-        canvas {
-            position: fixed;
-            left: 0; 
-            right: 0; 
-            margin-left: auto; 
-            margin-right: auto; 
-        }
-    </style>
-</head>
+            WebFontConfig = {
+                google: { families: [ 'Press+Start+2P::latin' ] },
+                active: start
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })();
 
-<body>
-</body>
-<!-- Powered by Froobit Framework -->
+        </script>
+    </body>
 </html>
