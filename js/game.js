@@ -49,7 +49,7 @@ $(function(Phaser) {
 			this.game.load.spritesheet('dude', myGame.IMAGE_PATH + 'img/dude.png', 32, 41);
 			this.game.load.image('start_button', myGame.IMAGE_PATH + 'img/play_button.png');
 			this.game.load.image('play_again_button', myGame.IMAGE_PATH + 'img/play_again.png');
-			this.game.load.image('shop_button', myGame.IMAGE_PATH + 'img/shop_button.png');
+			
 		},
 		create: function(){
 			var background = this.game.add.sprite(0, 0, 'menu_background');
