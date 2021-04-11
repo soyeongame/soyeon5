@@ -260,11 +260,7 @@ $(function(Phaser) {
 	myGame.finish.prototype = {
 		preload: function(){
 			this.congratulations = [
-				'You are the kwisatz haderach of shopping',
-				'Is it the shoes?!',
-				'You\'re a consumer legend!',
-				'Leave some gifts for the other folks!',
-				'You have a monopoly on the holidays'
+				
 			];
 		},
 		create: function(){
