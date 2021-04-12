@@ -75,7 +75,7 @@ playGame.prototype = {
      },
      update: function(){
           var distanceFromTarget = this.balls[this.rotatingBall].position.distance(this.targetArray[1].position);
-          if(distanceFromTarget > 90 && this.destroy && this.steps > visibleTargets){
+          if(distanceFromTarget > 150 && this.destroy && this.steps > visibleTargets){
                this.gameOver();
           }
           if(distanceFromTarget < 80 && !this.destroy){
