@@ -26,7 +26,7 @@ playGame.prototype = {
      create: function(){
           this.savedData = localStorage.getItem("circlepath")==null?{score:0}:JSON.parse(localStorage.getItem("circlepath"));
           var style = {
-               font: "bold 90px Arial",
+               font: "bold 60px Arial",
                fill: "#ffffff"
           };
           var text = game.add.text(0, game.height - 64, "Best score: "+this.savedData.score.toString(), style);
@@ -78,7 +78,7 @@ playGame.prototype = {
           if(distanceFromTarget > 80 && this.destroy && this.steps > visibleTargets){
                this.gameOver();
           }
-          if(distanceFromTarget < 70 && !this.destroy){
+          if(distanceFromTarget < 60 && !this.destroy){
                this.destroy = true;
           }
           this.rotationAngle = (this.rotationAngle + this.saveRotationSpeed * (this.rotatingDirection * 2 - 1)) % 360;
@@ -126,7 +126,7 @@ playGame.prototype = {
           target.y = startY + ballDistance * Math.cos(Phaser.Math.degToRad(randomAngle));
           target.alpha = 1 - this.targetArray.length * (1 / 7);
           var style = {
-               font: "bold 60px Arial",
+               font: "bold 50px Arial",
                fill: "#" + this.tintColor.toString(16),
                align: "center"
           };
@@ -141,7 +141,7 @@ playGame.prototype = {
                score: Math.max(this.savedData.score, this.steps - visibleTargets)
 	     }));
           game.input.onDown.remove(this.changeBall, this);
-          this.saveRotationSpeed = .7;
+          this.saveRotationSpeed = .6;
           this.arm.destroy();
           var gameOverTween = game.add.tween(this.balls[1 - this.rotatingBall]).to({
                alpha: 0
