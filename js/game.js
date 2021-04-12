@@ -75,10 +75,10 @@ playGame.prototype = {
      },
      update: function(){
           var distanceFromTarget = this.balls[this.rotatingBall].position.distance(this.targetArray[1].position);
-          if(distanceFromTarget > 80 && this.destroy && this.steps > visibleTargets){
+          if(distanceFromTarget > 90 && this.destroy && this.steps > visibleTargets){
                this.gameOver();
           }
-          if(distanceFromTarget < 60 && !this.destroy){
+          if(distanceFromTarget < 80 && !this.destroy){
                this.destroy = true;
           }
           this.rotationAngle = (this.rotationAngle + this.saveRotationSpeed * (this.rotatingDirection * 2 - 1)) % 360;
