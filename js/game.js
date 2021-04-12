@@ -126,7 +126,7 @@ playGame.prototype = {
           target.y = startY + ballDistance * Math.cos(Phaser.Math.degToRad(randomAngle));
           target.alpha = 1 - this.targetArray.length * (1 / 7);
           var style = {
-               font: "bold 32px Arial",
+               font: "bold 60px Arial",
                fill: "#" + this.tintColor.toString(16),
                align: "center"
           };
@@ -141,7 +141,7 @@ playGame.prototype = {
                score: Math.max(this.savedData.score, this.steps - visibleTargets)
 	     }));
           game.input.onDown.remove(this.changeBall, this);
-          this.saveRotationSpeed = 0;
+          this.saveRotationSpeed = .7;
           this.arm.destroy();
           var gameOverTween = game.add.tween(this.balls[1 - this.rotatingBall]).to({
                alpha: 0
