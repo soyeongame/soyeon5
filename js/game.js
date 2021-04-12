@@ -4,7 +4,7 @@ var ballDistance = 120;
 var rotationSpeed = 4;
 var angleRange = [25, 155];
 var visibleTargets = 7;
-var bgColors = [0x62bd18, 0xffbb00, 0xff5300, 0xd21034, 0xff475c, 0x8f16b2];
+var bgColors = [0xdcfac3, 0xf5e1a9, 0xf5bb9f, 0xf5b5c1, 0xfaa0a0, 0xecbefa];
 
 window.onload = function() {	
 	game = new Phaser.Game(640, 960, Phaser.CANVAS, "");
@@ -26,7 +26,7 @@ playGame.prototype = {
      create: function(){
           this.savedData = localStorage.getItem("circlepath")==null?{score:0}:JSON.parse(localStorage.getItem("circlepath"));
           var style = {
-               font: "bold 64px Arial",
+               font: "bold 70px Arial",
                fill: "#ffffff"
           };
           var text = game.add.text(0, game.height - 64, "Best score: "+this.savedData.score.toString(), style);
@@ -75,10 +75,10 @@ playGame.prototype = {
      },
      update: function(){
           var distanceFromTarget = this.balls[this.rotatingBall].position.distance(this.targetArray[1].position);
-          if(distanceFromTarget > 90 && this.destroy && this.steps > visibleTargets){
+          if(distanceFromTarget > 80 && this.destroy && this.steps > visibleTargets){
                this.gameOver();
           }
-          if(distanceFromTarget < 40 && !this.destroy){
+          if(distanceFromTarget < 50 && !this.destroy){
                this.destroy = true;
           }
           this.rotationAngle = (this.rotationAngle + this.saveRotationSpeed * (this.rotatingDirection * 2 - 1)) % 360;
