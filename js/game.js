@@ -26,7 +26,7 @@ playGame.prototype = {
      create: function(){
           this.savedData = localStorage.getItem("circlepath")==null?{score:0}:JSON.parse(localStorage.getItem("circlepath"));
           var style = {
-               font: "bold 70px Arial",
+               font: "bold 90px Arial",
                fill: "#ffffff"
           };
           var text = game.add.text(0, game.height - 64, "Best score: "+this.savedData.score.toString(), style);
