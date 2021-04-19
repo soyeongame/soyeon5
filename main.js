@@ -19,11 +19,11 @@ preload:function(){
     game.load.atlas('atlas','blocks-arrows.3.png','blocks-arrows.3.json');
 },
 create:function(){
-    game.stage.backgroundColor='#000000';
+    game.stage.backgroundColor='#fce57c';
     game.input.onTap.add(this.ontap,this);
-    game.add.text(426,6,'Score',{font:"18px monospace",fill:"#ffffff"});
-    this.labelScore=game.add.text(426,36,this.score,{font:"18px monospace",fill:"#ffffff"});
-    game.add.text(10,36,'Restart',{font:"18px monospace",fill:"#ffffff"});
+    game.add.text(426,6,'Score',{font:"18px monospace",fill:"#000000"});
+    this.labelScore=game.add.text(426,36,this.score,{font:"18px monospace",fill:"#000000"});
+    game.add.text(10,36,'Restart',{font:"18px monospace",fill:"#000000"});
     for (let i=0;i<100;i++){
         this.mf[i]=game.add.sprite((i%10)*32+this.mfd[0],(~~(i/10))*32+this.mfd[1],'atlas','em');
     }
