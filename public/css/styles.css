@@ -1,0 +1,344 @@
+* {
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+input {
+  width: 300px;
+  height: 28px;
+  color: #8b8b8b;
+  background-color: #e0e0e0;
+  padding: 8px 12px;
+  border: 0 solid;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input ::placeholder {
+  color: #8b8b8b;
+}
+
+div {
+  font-family: Helvetica, "sans-serif";
+  font-weight: bold;
+  color: #505050;
+  user-select: none;
+}
+
+/* Input for player messages */
+.player-message-input {
+  text-transform: none;
+  box-shadow: 0 0 6px #c1c1c1;
+}
+
+/* Container for the wildcard */
+.wildcard-menu-container {
+  height: 80px;
+  width: 530px;
+  padding: 22px;
+  border-radius: 8px;
+  color: #505050;
+  background-color: rgba(245, 245, 245, 0.8);
+  text-align: center;
+
+  animation: whacky-colors-border 3s infinite;
+}
+
+/* Name text */
+.name {
+  color: white;
+  background-color: #ff88dc;
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 0 0 #d06eb3;
+  -moz-box-shadow: 0 4px 0 0 #d06eb3;
+  box-shadow: 0 4px 0 0 #d06eb3;
+}
+
+/* Winner text */
+.winner {
+  color: white;
+  background-color: #ffe45e;
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 0 0 #eed557;
+  -moz-box-shadow: 0 4px 0 0 #eed557;
+  box-shadow: 0 4px 0 0 #eed557;
+}
+
+/* Connection status */
+.status {
+  color: white;
+  background-color: #99ff99;
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 0 0 #7fdf7f;
+  -moz-box-shadow: 0 4px 0 0 #7fdf7f;
+  box-shadow: 0 4px 0 0 #7fdf7f;
+}
+
+/* Countdown score */
+.hand-count {
+  color: white;
+  background-color: #ff0040;
+  padding: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 0 0 #c12048;
+  -moz-box-shadow: 0 3px 0 0 #c12048;
+  box-shadow: 0 3px 0 0 #c12048;
+}
+
+/* Countdown score */
+.countdown {
+  color: white;
+  background-color: #39A0ED;
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 0 0 #3772FF;
+  -moz-box-shadow: 0 4px 0 0 #3772FF;
+  box-shadow: 0 4px 0 0 #3772FF;
+}
+
+/* Title */
+.title-menu {
+  color: white;
+  background-color: #e63946;
+  padding: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 0 0 #b72d37;
+  -moz-box-shadow: 0 4px 0 0 #b72d37;
+  box-shadow: 0 4px 0 0 #b72d37;
+}
+
+/* Lobby message */
+.message-lobby {
+  color: white;
+  background-color: #A663CC;
+  padding: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 0 0 #824D9F;
+  -moz-box-shadow: 0 4px 0 0 #824D9F;
+  box-shadow: 0 4px 0 0 #824D9F;
+}
+
+/* Use code message */
+.message-share-code {
+  color: white;
+  background-color: #00bbf9;
+  padding: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 0 0 #0393c3;
+  -moz-box-shadow: 0 4px 0 0 #0393c3;
+  box-shadow: 0 4px 0 0 #0393c3;
+}
+
+/* Game message */
+.message-game {
+  color: white;
+  background-color: #A663CC;
+  padding: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 0 0 #824D9F;
+  -moz-box-shadow: 0 4px 0 0 #824D9F;
+  box-shadow: 0 4px 0 0 #824D9F;
+}
+
+/* Game message */
+.message-shuffle {
+  color: white;
+  background-color: #ff88dc;
+  padding: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 0 0 #d06eb3;
+  -moz-box-shadow: 0 4px 0 0 #d06eb3;
+  box-shadow: 0 4px 0 0 #d06eb3;
+}
+
+/* Game message */
+.message-wildcard {
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+  animation: whacky-colors-button 3s infinite;
+}
+
+/* Player message */
+.message-player {
+  color: #505050;
+  background-color: #e6e6e6;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+/* Countdown message */
+.message-countdown {
+  color: white;
+  background-color: #3185FC;
+  padding: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 0 0 #2161bb;
+  -moz-box-shadow: 0 4px 0 0 #2161bb;
+  box-shadow: 0 4px 0 0 #2161bb;
+}
+
+/* Error message */
+.message-error {
+  color: white;
+  background-color: #ff0040;
+  padding: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 0 0 #c12048;
+  -moz-box-shadow: 0 4px 0 0 #c12048;
+  box-shadow: 0 4px 0 0 #c12048;
+}
+
+/* Any buttons within the menu scene */
+.menu-button {
+  color: #505050;
+  font-weight: bold;
+  height: 36px;
+  width: 150px;
+  border-radius: 8px;
+  border-color: #e0e0e0;
+  border-right: none;
+  border-left: none;
+  background-color: #e0e0e0;
+  -webkit-box-shadow: 0 4px 0 0 #9b9b9b;
+  -moz-box-shadow: 0 4px 0 0 #9b9b9b;
+  box-shadow: 0 4px 0 0 #9b9b9b;
+}
+
+/* Any buttons within the game scene */
+.game-button {
+  color: #505050;
+  font-weight: bold;
+  padding: 6px;
+  width: 150px;
+  border-radius: 4px;
+  border-color: #e0e0e0;
+  border-right: none;
+  border-left: none;
+  background-color: #e0e0e0;
+  -webkit-box-shadow: 0 4px 0 0 #9b9b9b;
+  -moz-box-shadow: 0 4px 0 0 #9b9b9b;
+  box-shadow: 0 4px 0 0 #9b9b9b;
+}
+
+/* Wildcard suit button stuff */
+.suit-button {
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+  width: 120px;
+  border-radius: 4px;
+  border-right: none;
+  border-left: none;
+  animation: whacky-colors-button 3s infinite;
+}
+
+.suit-button:nth-of-type(1n) {
+  background-color: #55ffff;
+  border-color: #55ffff;
+  -webkit-box-shadow: 0 4px 0 0 #3bb0b0;
+  -moz-box-shadow: 0 4px 0 0 #3bb0b0;
+  box-shadow: 0 4px 0 0 #3bb0b0;
+}
+
+.suit-button:nth-of-type(2n) {
+  background-color: #ff55ff;
+  border-color: #ff55ff;
+  -webkit-box-shadow: 0 4px 0 0 #ae34ae;
+  -moz-box-shadow: 0 4px 0 0 #ae34ae;
+  box-shadow: 0 4px 0 0 #ae34ae;
+}
+
+.suit-button:nth-of-type(3n) {
+  background-color: #eaea0e;
+  border-color: #eaea0e;
+  -webkit-box-shadow: 0 4px 0 0 #a2a225;
+  -moz-box-shadow: 0 4px 0 0 #a2a225;
+  box-shadow: 0 4px 0 0 #a2a225;
+}
+
+/* Color option button for the player setup scene */
+.color-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  border-right: none;
+  border-left: none;
+  background-color: #000000;
+  border-color: #000000;
+  -webkit-box-shadow: 0 4px 0 0 #9b9b9b;
+  -moz-box-shadow: 0 4px 0 0 #9b9b9b;
+  box-shadow: 0 4px 0 0 #9b9b9b;
+}
+
+/* Tumblr-level color animation... lovely */
+@keyframes whacky-colors-border {
+	0% {
+    color: #55ffff;
+    border: solid 4px #55ffff;
+  }
+	25% {
+    color: #ff55ff;
+    border: solid 4px #ff55ff;
+  }
+  50% {
+    color: #ffff55;
+    border: solid 4px #ffff55;
+  }
+  75% {
+    color: #55ff55;
+    border: solid 4px #55ff55;
+  }
+  100% {
+    color: #55ffff;
+    border: solid 4px #55ffff;
+  }
+}
+
+@keyframes whacky-colors-button {
+	0% {
+    background-color: #55ffff;
+    border-color: #55ffff;
+    -webkit-box-shadow: 0 4px 0 0 #3bb0b0;
+    -moz-box-shadow: 0 4px 0 0 #3bb0b0;
+    box-shadow: 0 4px 0 0 #3bb0b0;
+  }
+	25% {
+    background-color: #ff55ff;
+    border-color: #ff55ff;
+    -webkit-box-shadow: 0 4px 0 0 #ae34ae;
+    -moz-box-shadow: 0 4px 0 0 #ae34ae;
+    box-shadow: 0 4px 0 0 #ae34ae;
+  }
+  50% {
+    background-color: #eaea0e;
+    border-color: #eaea0e;
+    -webkit-box-shadow: 0 4px 0 0 #a2a225;
+    -moz-box-shadow: 0 4px 0 0 #a2a225;
+    box-shadow: 0 4px 0 0 #a2a225;
+  }
+  75% {
+    background-color: #55ff55;
+    border-color: #55ff55;
+    -webkit-box-shadow: 0 4px 0 0 #3db03d;
+    -moz-box-shadow: 0 4px 0 0 #3db03d;
+    box-shadow: 0 4px 0 0 #3db03d;
+  }
+  100% {
+    background-color: #55ffff;
+    border-color: #55ffff;
+    -webkit-box-shadow: 0 4px 0 0 #3bb0b0;
+    -moz-box-shadow: 0 4px 0 0 #3bb0b0;
+    box-shadow: 0 4px 0 0 #3bb0b0;
+  }
+}
