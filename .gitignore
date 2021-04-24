@@ -9,5 +9,3 @@ node_modules/
 public/js/
 dist/
 npm-debug.log
-
-.vercel
