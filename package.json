@@ -25,6 +25,7 @@
     "express": "^4.17.1",
     "helmet": "^3.23.3",
     "phaser": "^3.24.1",
+    "serve": "^11.3.2",
     "socket.io": "^2.4.1",
     "socket.io-client": "^2.3.0"
   },
