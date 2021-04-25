@@ -1041,7 +1041,7 @@ export default class GameScene extends Phaser.Scene {
     * Add a 'use the code to connect to the room blah blah...' text to the scene.
     */
    addUseCodeMessageText() {
-     this.useCodeMessageText = this.add.dom(this.camera.centerX, this.camera.centerY + 20, 'div', 'font-size: 14px;', `게임 참여 ${this.socket.roomCode.toUpperCase()} 입력하세요`);
+     this.useCodeMessageText = this.add.dom(this.camera.centerX, this.camera.centerY + 20, 'div', 'font-size: 14px;', ` ${this.socket.roomCode.toUpperCase()} 방`);
      this.useCodeMessageText.setClassName('message-share-code');
    }
 
