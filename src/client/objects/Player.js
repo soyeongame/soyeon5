@@ -13,7 +13,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
     this.textureMap = textureMap;
 
     this.hand = [];
-    this.countdown = 8;
+    this.countdown = 5;
     this.ready = false;
 
     this.setScale(0.25);

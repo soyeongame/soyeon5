@@ -4,7 +4,7 @@ import MainMenuScene from './scenes/MainMenuScene';
 import PlayerSetupScene from './scenes/PlayerSetupScene';
 
 const config = {
-  title:    'soyeon 8',
+  title:    'soyeon 5',
   version:  '1.2',
   type:     Phaser.AUTO,
   parent:   'game',

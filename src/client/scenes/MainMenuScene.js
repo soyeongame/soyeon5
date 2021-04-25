@@ -53,7 +53,7 @@ export default class MainMenuScene extends Phaser.Scene {
    * Add title text to the scene.
    */
   addTitleText() {
-    const titleText = this.add.dom(this.camera.centerX, this.camera.centerY - 200, 'div', 'font-size: 27px', 'Soyeon 8');
+    const titleText = this.add.dom(this.camera.centerX, this.camera.centerY - 200, 'div', 'font-size: 27px', '전소연 5');
     titleText.setClassName('title-menu');
   }
 
@@ -69,13 +69,13 @@ export default class MainMenuScene extends Phaser.Scene {
    * Add a player name input and label to the scene.
    */
   addNameInput() {
-    const nameLabel = this.add.dom(this.camera.centerX - 130, this.camera.centerY - 100 - 35, 'div', 'font-size: 18px;', 'NAME');
+    const nameLabel = this.add.dom(this.camera.centerX - 130, this.camera.centerY - 100 - 35, 'div', 'font-size: 18px;', '닉네임');
     nameLabel.setClassName('label');
 
     const nameInput = this.add.dom(this.camera.centerX, this.camera.centerY - 100, 'input');
     nameInput.setClassName('name-input');
     nameInput.node.maxLength = 12;
-    nameInput.node.placeholder = 'ENTER YOUR NAME';
+    nameInput.node.placeholder = '닉네임 입력';
     nameInput.setInteractive();
   }
 
@@ -83,13 +83,13 @@ export default class MainMenuScene extends Phaser.Scene {
    * Add a room code input and label to the scene.
    */
   addRoomCodeInput() {
-    const roomCodeLabel = this.add.dom(this.camera.centerX - 100, this.camera.centerY - 20 - 35, 'div', 'font-size: 18px;', 'ROOM CODE');
+    const roomCodeLabel = this.add.dom(this.camera.centerX - 130, this.camera.centerY - 20 - 35, 'div', 'font-size: 18px;', '방코드');
     roomCodeLabel.setClassName('label');
 
     const roomCodeInput = this.add.dom(this.camera.centerX, this.camera.centerY - 20, 'input');
     roomCodeInput.setClassName('room-code-input');
     roomCodeInput.node.maxLength = 4;
-    roomCodeInput.node.placeholder = 'ENTER 4 CHARACTER CODE';
+    roomCodeInput.node.placeholder = '4글자 코드 입력';
     roomCodeInput.setInteractive();
   }
 
@@ -97,7 +97,7 @@ export default class MainMenuScene extends Phaser.Scene {
    * Add a create game button that creates a game session/token (GameScene).
    */
   addCreateGameButton() {
-    const createGameButton = this.add.dom(this.camera.centerX - 85, this.camera.centerY + 40, 'button', 'font-size: 16px;', 'CREATE GAME');
+    const createGameButton = this.add.dom(this.camera.centerX - 85, this.camera.centerY + 40, 'button', 'font-size: 16px;', '방 만들기');
     createGameButton.setClassName('menu-button');
     createGameButton.addListener('click');
 
@@ -138,7 +138,7 @@ export default class MainMenuScene extends Phaser.Scene {
    * Add a play button that starts the player setup scene (PlayerSetupScene).
    */
   addJoinButton() {
-    const joinButton = this.add.dom(this.camera.centerX + 85, this.camera.centerY + 40, 'button', 'font-size: 16px;', 'JOIN');
+    const joinButton = this.add.dom(this.camera.centerX + 85, this.camera.centerY + 40, 'button', 'font-size: 16px;', '방 들어가기');
     joinButton.setClassName('menu-button');
     joinButton.addListener('click');
 

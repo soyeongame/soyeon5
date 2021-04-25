@@ -809,7 +809,7 @@ export default class GameScene extends Phaser.Scene {
         // If the button isn't present and the player isn't ready, add it
         // to the scene.
         if (!this.readyButton && !this.player.ready) {
-          this.readyButton = this.add.dom(this.getGridRowPosition(3), this.getGridColumnPosition(4) - 80, 'button', 'font-size: 16px;', 'READY');
+          this.readyButton = this.add.dom(this.getGridRowPosition(3), this.getGridColumnPosition(4) - 80, 'button', 'font-size: 16px;', '준비');
           this.readyButton.setClassName('game-button');
           this.readyButton.addListener('click');
 
@@ -836,11 +836,11 @@ export default class GameScene extends Phaser.Scene {
    */
   showWildCardMenu(card) {
     this.suitCardButtons = [];
-    this.wildCardMenu = this.add.dom(this.camera.centerX, this.camera.centerY, 'div', 'font-size: 20px;', 'CHOOSE A NEW SUIT');
+    this.wildCardMenu = this.add.dom(this.camera.centerX, this.camera.centerY, 'div', 'font-size: 20px;', '새 카드 모양 선택');
     this.wildCardMenu.setClassName('wildcard-menu-container');
 
     const suits = [ 'hearts', 'diamonds', 'spades', 'clubs' ];
-    const buttonText = [ '♥ HEARTS', '♦ DIAMONDS', '♠ SPADES', '♣ CLUBS' ];
+    const buttonText = [ '♥ 하트', '♦ 다이아몬드', '♠ 스페이드', '♣ 클로버' ];
     let offset = 0;
 
     for (let i = 0; i <= 3; i++) {
@@ -966,7 +966,7 @@ export default class GameScene extends Phaser.Scene {
   showWildcardMessage(suit) {
     // Only display one message at a time.
     if (!this.wildcardMessageText) {
-      this.wildcardMessageText = this.add.dom(this.camera.centerX, this.camera.centerY - 120, 'div', 'font-size: 16px;', `THE SUIT HAS CHANGED TO ${suit.toUpperCase()}`);
+      this.wildcardMessageText = this.add.dom(this.camera.centerX, this.camera.centerY - 120, 'div', 'font-size: 16px;', `새 카드 모양 ${suit.toUpperCase()}`);
       this.wildcardMessageText.setClassName('message-wildcard');
 
       this.tweens.add({
@@ -1032,7 +1032,7 @@ export default class GameScene extends Phaser.Scene {
          this.lobbyMessageText.setText(`${this.players.length} / 4 PLAYERS CONNECTED`);
        }
        else {
-         this.lobbyMessageText.setText('NEED MORE PLAYERS TO START');
+         this.lobbyMessageText.setText('시작하기 위해 더 많은 플레이어 필요');
        }
      }
    }
@@ -1041,7 +1041,7 @@ export default class GameScene extends Phaser.Scene {
     * Add a 'use the code to connect to the room blah blah...' text to the scene.
     */
    addUseCodeMessageText() {
-     this.useCodeMessageText = this.add.dom(this.camera.centerX, this.camera.centerY + 20, 'div', 'font-size: 14px;', `USE CODE ${this.socket.roomCode.toUpperCase()} TO JOIN THE GAME`);
+     this.useCodeMessageText = this.add.dom(this.camera.centerX, this.camera.centerY + 20, 'div', 'font-size: 14px;', `게임 참여 ${this.socket.roomCode.toUpperCase()} 입력하세요`);
      this.useCodeMessageText.setClassName('message-share-code');
    }
 
@@ -1049,7 +1049,7 @@ export default class GameScene extends Phaser.Scene {
    * Add a player message button to the scene.
    */
   addPlayerMessageButton() {
-    this.playerMessageButton = this.add.dom(this.getGridRowPosition(3), this.getGridColumnPosition(4) - 30, 'button', 'font-size: 16px;', 'SEND MESSAGE');
+    this.playerMessageButton = this.add.dom(this.getGridRowPosition(3), this.getGridColumnPosition(4) - 30, 'button', 'font-size: 16px;', '채팅');
     this.playerMessageButton.setClassName('game-button');
     this.playerMessageButton.addListener('click');
 
@@ -1062,7 +1062,7 @@ export default class GameScene extends Phaser.Scene {
    * Add room code button to the scene.
    */
   addRoomCodeButton() {
-    this.roomCodeButton = this.add.dom(this.getGridRowPosition(3), this.getGridColumnPosition(4) + 30, 'button', 'font-size: 16px;', `CLICK TO COPY \n CODE ${this.socket.roomCode.toUpperCase()}`);
+    this.roomCodeButton = this.add.dom(this.getGridRowPosition(3), this.getGridColumnPosition(4) + 30, 'button', 'font-size: 16px;', `코드 복사 \n ${this.socket.roomCode.toUpperCase()}`);
     this.roomCodeButton.setClassName('game-button');
     this.roomCodeButton.addListener('click');
 
@@ -1091,7 +1091,7 @@ export default class GameScene extends Phaser.Scene {
    * Add draw card button to the scene.
    */
   addDrawCardButton() {
-    this.drawCardButton = this.add.dom(this.getGridRowPosition(3), this.getGridColumnPosition(4) - 80, 'button', 'font-size: 16px;', 'DRAW CARD');
+    this.drawCardButton = this.add.dom(this.getGridRowPosition(3), this.getGridColumnPosition(4) - 80, 'button', 'font-size: 16px;', '카드 받기');
     this.drawCardButton.setClassName('game-button');
     this.drawCardButton.addListener('click');
 

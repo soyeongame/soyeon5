@@ -10,7 +10,7 @@ export default class Player {
     this.textureMap = textureMap;
 
     this.hand = [];
-    this.countdown = 8;
+    this.countdown = 5;
     this.ready = false;
   }
 
